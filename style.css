@@ -1,0 +1,36 @@
+.stats-inv-card{
+  background-color: bisque;
+  border-radius: 2%;
+  filter: drop-shadow(1px 1px 1px);
+}
+
+.dragon-img{
+  background-image: url(https://64.media.tumblr.com/4545392a2f70289367b94028904cf82f/tumblr_o32lf6gPYK1tgzy56o1_540.gifv);
+  border: none!important;
+  height: 500px;
+  width: 500px;
+}
+
+.character-img{
+  background-image: url(https://64.media.tumblr.com/2be0e1a591f35dc0fde50b155c9017a0/tumblr_o47dg7Niqw1tgzy56o1_r2_400.gifv);
+  border: none!important;
+  height: 300px;
+  width: 300px;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.progress{
+  height: 20px;
+}
+
+.gold-knight {
+  background-image: url(https://64.media.tumblr.com/eededf034b99055a53b3b110158f9624/tumblr_nmrjalPbmk1tgzy56o1_250.gifvs);
+  border: none!important;
+  height: 200px;
+  width: 200px;
+  background-repeat: none;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
