@@ -31,7 +31,7 @@
   </style>
 </head>
 
-<body class="debug">
+<body class="">
   <header class="bg-dark text-light">
     <nav class="container-fluid">
       <div class="row m-0">
@@ -48,71 +48,86 @@
     </nav>
   </header>
   <main class="container-fluid">
-    <!-- OFFCANVAS UPGRADES -->
-    <section class="p-2">
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Store</button>
-      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-        aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">STORE</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="offcanvas-body p-0">
-            <section>
-              <h1 class="py-3">Click Upgrades</h1>
-                <div class="fs-3">
-                  <p><b>Double Sword</b><br><span>x2 Multiplier</span></p>
-                  <button class="btn btn-dark" onclick="buyDoubleSword()">BUY 100</button>
-                </div>
-                <div class="fs-3">
-                  <p><b>Flame Sword</b><br><span>x4 Multiplier</span></p>
-                  <button class="btn btn-dark" onclick="buyFlameSword()">BUY 200</button>
-                </div>
-              <h1 class="py-3">Auto Upgrades</h1>
-                <div class="fs-3">
-                  <p><b>Flying Wolf</b><br><span>x5 Dragon Scales | 5 seconds</span></p>
-                  <button class="btn btn-dark" onclick="buyFlyingWolf()">BUY 300</button>
-                </div>
-                <div class="fs-3">
-                  <p><b>Gold Knight</b><br><span>x10 Dragon Scales | 10 seconds</span></p>
-                  <button class="btn btn-dark" onclick="buyGoldKnight()">BUY 500</button>
-                </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
 <!-- MAIN PARTS OF GAME -->
     <section class="row">
-      <div class="col-md-9">
-        <div class="row">
+      <div class="col-md-10">
+        <div class="row py-3">
           <div id="game-clock">
             <!-- <div class="progress">
               <div  class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
             </div> -->
           </div>
-          <div class="col-md-7 d-flex justify-content-center align-items-start">
-            <button class="btn dragon-img" onclick="getScales()">
-            </button>
-          </div>
-          <div class="col-md-5 d-flex justify-content-end align-items-end">
-            <div class="character-img">
+          <div class="col-md-6 d-flex justify-content-center align-items-start">
+            <div>
+              <button class="btn dragon-img" onclick="getScales()">
+              </button>
             </div>
-            <div class=""></div> <!--Add gold-knight image-->
+          </div>
+          <div class="col-md-6 d-flex flex-column"> 
+            <div id="flying-wolf-img" class="row justify-content-center wolf-bg">
+              <!-- <div class="wolf-img"></div> -->
+            </div>
+            <div class="row">
+              <div class="col-md-7 d-flex justify-content-start align-items-end">
+                <div class="character-img"></div>
+              </div>
+              <div id="gold-knight-img" class="col-md-5 d-flex justify-content-start align-items-end">
+                <!-- <div class="knight-img"></div> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
 <!-- Stats and Inventory -->
-      <div class="col-md-3">
+      <div class="col-md-2">
+    <!-- OFFCANVAS UPGRADES -->
+        <section class="p-2">
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Store</button>
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">STORE</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="offcanvas-body p-0">
+                <section class="text-center">
+                  <h1 class="py-3">Click Upgrades</h1>
+                    <div class="row fs-3 store-card rounded justify-content-center p-5">
+                      <div class="double-sword-img"></div>
+                      <p class="m-0 py-5"><b>Double Sword</b><br><span>x2 Multiplier</span></p>
+                    </div>
+                    <button class="btn btn-dark mb-3 btn-translate" onclick="buyDoubleSword()">BUY 100</button>
+                    <div class="row fs-3 store-card rounded justify-content-center p-5">
+                      <div class=""></div>
+                      <div class="flame-sword-img"></div>
+                      <p class="m-0 py-4"><b>Flame Sword</b><br><span>x4 Multiplier</span></p>
+                    </div>
+                    <button class="btn btn-dark mb-3 btn-translate" onclick="buyFlameSword()">BUY 200</button>
+                  <h1 class="py-3">Auto Upgrades</h1>
+                    <div class="row justify-content-center fs-3 store-card rounded">
+                      <div class="wolf-img"></div>
+                      <p class="pb-4"><b>Flying Wolf</b><br><span>x5 Dragon Scales</span><br>5 Seconds-</p>
+                    </div>
+                    <button class="btn btn-dark mb-3 btn-translate" onclick="buyFlyingWolf()">BUY FLYING WOLF</button>
+                    <div class="row justify-content-center fs-3 store-card rounded">
+                      <div class="knight-img"></div> 
+                      <p class="pb-4"><b>Gold Knight</b><br><span>x10 Dragon Scales</span><br>10 Seconds</p>
+                    </div>
+                    <button class="btn btn-dark mb-3 btn-translate" onclick="buyGoldKnight()">BUY GOLD KNIGHT</button>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="row text-center justify-content-center p-4">
           <h4>Inventory</h4>
           <div class="stats-inv-card">
-            <p>Double Swords = <span id="double-sword"></span></p>
-            <p>Flame Swords = <span id="flame-sword"></span></p>
-            <p>Flying Wolf = <span id="flying-wolf"></span><br><span>Time remaining: </span><span id="wolf-time"></span></p>
-            <p>Gold Knight = <span id="gold-knight"></span><br><span>Time remaining: </span><span id="knight-time"></span></p>
+            <p>Double Swords = <span id="double-sword">0</span></p>
+            <p>Flame Swords = <span id="flame-sword">0</span></p>
+            <p>Flying Wolf = <span id="flying-wolf"></span><br><span>Time remaining: </span><span id="wolf-time">0</span></p>
+            <p>Gold Knight = <span id="gold-knight"></span><br><span>Time remaining: </span><span id="knight-time">0</span></p>
           </div>
         </div>
         <div class="row text-center justify-content-center p-4">
