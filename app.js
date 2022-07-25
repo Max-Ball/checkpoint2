@@ -25,7 +25,7 @@ let gameClock = 100
 
 
 const character = {
-  scales: 0,
+  scales: 5000,
   health: 100,
   multiplier: 1
 }
@@ -73,19 +73,36 @@ let automaticUpgrades = {
 
 function startGame(){
   document.getElementById("start-game").classList.add("d-none");
-  document.getElementById("game").classList.remove("d-none");
+  document.getElementById("level").classList.remove("d-none");
 }
 
-// function chooseLevel(){
-//   document.getElementById("game").classList.remove("d-none")
-//   document.getElementById("level").classList.add("d-done")
-//   // document.getElementsByClassName("main-bg").classList.remove(".main-bg")
-//   // document.getElementsByClassName("main-bg").classList.add(".level-bg-1")
-// }
+function chooseLevel1(){
+  document.getElementById("level").classList.add("d-none")
+  document.getElementById("game").classList.remove("d-none")
+  document.getElementById("background").classList.remove("main-bg")
+  document.getElementById("background").classList.add("level1-background")
+}
 
-// function levelOne(){
+function chooseLevel2(){
+  document.getElementById("level").classList.add("d-none")
+  document.getElementById("game").classList.remove("d-none")
+  document.getElementById("background").classList.remove("main-bg")
+  document.getElementById("background").classList.add("level2-background")
+}
 
-// }
+function chooseLevel3(){
+  document.getElementById("level").classList.add("d-none")
+  document.getElementById("game").classList.remove("d-none")
+  document.getElementById("background").classList.remove("main-bg")
+  document.getElementById("background").classList.add("level3-background")
+}
+
+function chooseLevel4(){
+  document.getElementById("level").classList.add("d-none")
+  document.getElementById("game").classList.remove("d-none")
+  document.getElementById("background").classList.remove("main-bg")
+  document.getElementById("background").classList.add("level4-background")
+}
 
 function getScales() {
   character.scales += 1;
@@ -301,7 +318,7 @@ function updateProgressBar() {
 setInterval(updateProgressBar, 100)
 draw()
 
-setInterval(collectAutoUpgrades, 1000)
+setInterval(collectAutoUpgrades, 3000)
 
 
 

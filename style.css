@@ -32,11 +32,27 @@
   border-radius: 5%;
 }
 
+.level2-background{
+  background-image: url(http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-9.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  min-height: 100vh;
+}
+
 .level-bg-3{
   background-image: url(http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-1.gif);
   min-height: 250px;
   min-width: 250px;
   border-radius: 5%;
+}
+
+.level3-background{
+  background-image: url(http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-1.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  min-height: 100vh;
 }
 
 .level-bg-4{
@@ -45,6 +61,15 @@
   min-width: 250px;
   border-radius: 5%;
 }
+
+.level4-background{
+  background-image: url(http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-18.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  min-height: 100vh;
+}
+
 
 .stats-inv-card{
   background-color: bisque;
@@ -106,7 +131,7 @@
 }
 
 .store-card{
-  background-color: aquamarine;
+  background-color: bisque;
 }
 
 .btn-translate{
